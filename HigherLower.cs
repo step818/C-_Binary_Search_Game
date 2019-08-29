@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Timers;
 
 class HigherLower
 {
@@ -35,6 +36,7 @@ class HigherLower
 
   public class Program
   {
+
     public static void Main()
     {
       int low = 1;
@@ -84,9 +86,10 @@ class HigherLower
 //  Random number generator from 1 - 100
         Random rnd = new Random();
 //  Computer's number is called "compsNumber"
-        int compsNumber = rnd.Next(1, 100); 
+        int compsNumber = rnd.Next(1, 101); 
 //  Thinking(setTimeout(, 3000));
-        Console.WriteLine("I have chosen my number. What is your first guess?");
+        System.Threading.Thread.Sleep(3000);
+        Console.WriteLine("I found my number. What is your first guess?");
 //  The user's guess is called "userGuess"
         int userGuess = 105;
         int count = 0;
@@ -115,6 +118,11 @@ class HigherLower
         }
       }
     } 
+  }
+
+  public static void TimerEvent(ElapsedEventArgs e)
+  {
+    Console.WriteLine("I have chosen my number. What is your first guess?", e.SignalTime);
   }
   public static bool CompCorrect(int userGuess, int compsNumber)
   {
