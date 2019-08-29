@@ -51,15 +51,16 @@ class HigherLower
         Console.ReadLine();
 
         string ans = null;
-
+        int compCount = 0;
         while(!Correct(ans))
         {
+          compCount ++;
           GuessNumber(compsGuess);
           ans = Console.ReadLine();
           
           if (Correct(ans))
           {
-            Console.WriteLine("I guessed it!");
+            Console.WriteLine("I guessed it! It took me " + compCount + " tries to figure it out.");
           }
           else if(Higher(ans))
           {
@@ -88,14 +89,16 @@ class HigherLower
         Console.WriteLine("I have chosen my number. What is your first guess?");
 //  The user's guess is called "userGuess"
         int userGuess = 105;
+        int count = 0;
         while(!(CompCorrect(userGuess, compsNumber)))
         {
-          Console.WriteLine("My number is " + compsNumber);
+          count ++;
+          // Console.WriteLine("My number is " + compsNumber);
           string strGuess = Console.ReadLine();
           userGuess = int.Parse(strGuess);
           if(CompCorrect(userGuess, compsNumber))
           {
-            Console.WriteLine("Yes that's it! Haha you are amazing!");
+            Console.WriteLine("Yes that's it! Haha you are amazing! It took you " + count + " tries to guess my number");
           }
           else if (CompHigher(userGuess, compsNumber))
           {
