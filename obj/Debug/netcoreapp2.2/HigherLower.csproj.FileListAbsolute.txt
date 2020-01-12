@@ -1,5 +1,4 @@
 C:\Users\steph\Desktop\HigherLower\obj\Debug\netcoreapp2.2\HigherLower.csprojAssemblyReference.cache
-C:\Users\steph\Desktop\HigherLower\obj\Debug\netcoreapp2.2\HigherLower.csproj.CoreCompileInputs.cache
 C:\Users\steph\Desktop\HigherLower\obj\Debug\netcoreapp2.2\HigherLower.AssemblyInfoInputs.cache
 C:\Users\steph\Desktop\HigherLower\obj\Debug\netcoreapp2.2\HigherLower.AssemblyInfo.cs
 C:\Users\steph\Desktop\HigherLower\bin\Debug\netcoreapp2.2\HigherLower.deps.json
